@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
+import KeylessSDK from '@inbloxme/keyless-transactions';
+const KeylessWidget = new KeylessSDK.Widget();
+
+declare let Web3: any;
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'inblox-keyless';
+
+  initKeylessWidget() {
+    KeylessWidget.initLogin();
+  }
 }
