@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'inblox-keyless'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('inblox-keyless');
+    expect(app).toEqual('inblox-keyless');
   });
 
   it('should render title', () => {

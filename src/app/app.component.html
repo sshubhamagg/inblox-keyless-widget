@@ -10,11 +10,19 @@
       <div class="col-8" width="60%">
         <div class="img-main-container">
           <img src="./assets/img/404.svg" alt="">
-          <p>Swap between any ERC Compliant token at the lowest possible
-            cost/slippage, this is offered through decentralised exchange
-            pools.</p>
-            <button class="button-wrap" (click)="initKeylessWidget()">Start Swapping</button>
-         
+          <p>Enabling keyless transactions</p>
+          <div *ngIf="handleName!=null|| handleName!=undefined">
+            Handlename: {{handleName}}<br>
+            Public Address: {{userAddress}}
+          </div>
+          <div *ngIf="handleName==null|| handleName==undefined">
+            <button class="button-wrap" (click)="initKeylessWidget()">Login</button>
+          </div>
+            
+      
+          
+            
+
         </div>
       </div>
     </div>

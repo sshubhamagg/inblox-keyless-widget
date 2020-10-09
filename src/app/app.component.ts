@@ -11,8 +11,19 @@ declare let Web3: any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  handleName: any;
+  userAddress: any;
 
   initKeylessWidget() {
     KeylessWidget.initLogin();
+
+    // Listening to login success event.
+    KeylessWidget.on(KeylessWidget.EVENTS.LOGIN_SUCCESS, (widgetData: any) => {
+      if (widgetData.status) {
+        const data = widgetData.data;        
+        this.handleName = data.handleName;
+        this.userAddress = data.publicAddress;
+      }
+    });
   }
 }
