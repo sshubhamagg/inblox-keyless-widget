@@ -14,11 +14,15 @@
           <div *ngIf="handleName!=null|| handleName!=undefined">
             Handlename: {{handleName}}<br>
             Public Address: {{userAddress}}
+            <button class="button-wrap" (click)="signTx()">Sign Transaction</button> 
+            <button class="button-wrap" (click)="sendTransaction()">Send Transaction</button>
           </div>
           <div *ngIf="handleName==null|| handleName==undefined">
             <button class="button-wrap" (click)="initKeylessWidget()">Login</button>
           </div>
-            
+          <div *ngIf="transactionHash!=null|| transactionHash!=undefined">
+          Transaction Hash: {{transactionHash}} 
+          </div>
       
           
             
