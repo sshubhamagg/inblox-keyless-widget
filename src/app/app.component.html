@@ -1,6 +1,6 @@
 <header>
   <nav class="navbar navbar-expand navbar-light bg-white topbar static-top shadow">
-     <a routerLink="" class="dashboard-logo"><img src="./assets/admin-img/inbloxBetaLogo.svg"></a>
+     <a routerLink="" class="dashboard-logo"><img src="../assets/admin-img/Inbloxme.svg" width="10%" height="10%"></a>
   </nav>
 </header>
 <div class="img-main-container" style="width: 60%; margin-left: 20%">
@@ -9,11 +9,14 @@
       </div>
       <div class="col-8" width="60%">
         <div class="img-main-container">
-          <img src="./assets/img/404.svg" alt="">
-          <p>Enabling keyless transactions</p>
+          <p>Enabling keyless transactions with Inbloxme </p><br>
+          <p>
+            Click to connect your wallet!
+          </p>
+
           <div *ngIf="handleName!=null|| handleName!=undefined">
-            Handlename: {{handleName}}<br>
-            Public Address: {{userAddress}}
+            Handlename: {{handleName}} <br>
+            Public Address: {{userAddress}} <br>
             <button class="button-wrap" (click)="signTx()">Sign Transaction</button> 
             <button class="button-wrap" (click)="sendTransaction()">Send Transaction</button>
           </div>

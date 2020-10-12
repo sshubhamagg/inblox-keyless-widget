@@ -75,9 +75,5 @@ export class AppComponent {
      }
     const signedTx = KeylessWidget.initSignTransaction(this.rawTx);
     console.log(signedTx);
-    
-
   };
-
-
 }
